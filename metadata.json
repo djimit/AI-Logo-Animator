@@ -1,0 +1,5 @@
+{
+  "name": "AI Logo Animator",
+  "description": "Design a unique logo for your company based on a description, or upload your own. Then, bring it to life with a stunning, AI-generated animated video using Google's Veo model.",
+  "requestFramePermissions": []
+}
