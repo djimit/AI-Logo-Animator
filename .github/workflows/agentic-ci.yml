@@ -31,7 +31,7 @@ jobs:
       node: ${{ steps.detect.outputs.node }}
       docker: ${{ steps.detect.outputs.docker }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - id: detect
         run: |
           echo "python=$(test -f requirements.txt || test -f pyproject.toml || test -f setup.py && echo true || echo false)" >> $GITHUB_OUTPUT
@@ -42,7 +42,7 @@ jobs:
     needs: detect-stack
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       
       - name: Setup Python
         if: needs.detect-stack.outputs.python == 'true'
